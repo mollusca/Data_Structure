@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int BSearch(int *list, int first, int last, int target) {
-	// list¿¡¼­ mid¸¦ ±¸ÇÏ°í, mid°¡ Å¸°ÙÀÌ¸é ¹Ù·Î ¸®ÅÏ / ¾Æ´Ï¸é »õ·Î ¼­Ä¡
+	// listì—ì„œ midë¥¼ êµ¬í•˜ê³ , midê°€ íƒ€ê²Ÿì´ë©´ ë°”ë¡œ ë¦¬í„´ / ì•„ë‹ˆë©´ ìƒˆë¡œ ì„œì¹˜
 	int mid;
 
 	if (first > last) return -1;
@@ -37,7 +37,6 @@ int main() {
 	int list[] = { 1, 3, 5, 7, 9 };
 	
 	while (1) {
-		if (opt == 3) break;
 		switch (opt = menu()) {
 		case 1:
 			printf("\n** Binary Search **\nList >> ");
@@ -47,9 +46,9 @@ int main() {
 			scanf("%d", &target);
 			result = BSearch(list, 0, sizeof(list) / sizeof(int) - 1, target);
 			if (result == -1)
-				printf("TargetÀ» Ã£À» ¼ö ¾øÀ½\n");
+				printf("Targetì„ ì°¾ì„ ìˆ˜ ì—†ìŒ\n");
 			else
-				printf("Result >> %d¹ø Â°À§Ä¡\n\n", result + 1);
+				printf("Result >> %dë²ˆ ì§¸ìœ„ì¹˜\n\n", result + 1);
 			break;
 		case 2:
 			printf("\n** Fibonacci Sequence **\n");
@@ -61,10 +60,10 @@ int main() {
 			printf("\n\n");
 			break;
 		case 3:
-			printf("Á¾·á\n");
-			break;
+			printf("ì¢…ë£Œ\n");
+			return 0;
 		default:
-			printf("Á¤È®ÇÑ°ªÀ» ÀÔ·ÂÇÏ¼¼¿ä. µÚÁö±â ½ÈÀ¸¸é\n");
+			printf("ì •í™•í•œê°’ì„ ì…ë ¥í•˜ì„¸ìš”. ë’¤ì§€ê¸° ì‹«ìœ¼ë©´\n");
 		}	
 	}
 	return 0;
